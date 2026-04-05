@@ -243,3 +243,32 @@ const guest = params.get("to");
 if(guest){
   document.getElementById("guestText").innerText = guest;
 }
+
+// ==========================
+// GET NAMA TAMU DARI URL
+// ==========================
+function getGuestName() {
+  const params = new URLSearchParams(window.location.search);
+  let name = params.get("to");
+
+  if (!name) return "Tamu Undangan";
+
+  // decode URL (biar spasi normal)
+  name = decodeURIComponent(name);
+
+  // sanitize (hindari script injection)
+  name = name.replace(/[^a-zA-Z0-9\s.,'-]/g, "");
+
+  return name;
+}
+
+// ==========================
+// SET KE HTML
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+  const guestEl = document.getElementById("guestText");
+
+  if (guestEl) {
+    guestEl.textContent = getGuestName();
+  }
+});
