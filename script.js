@@ -251,15 +251,25 @@ function getGuestName() {
   const params = new URLSearchParams(window.location.search);
   let name = params.get("to");
 
-  if (!name) return "Tamu Undangan";
+  // fallback jika kosong
+  if (!name || name.trim() === "") {
+    return "Bapak/Ibu/Saudara/i";
+  }
 
-  // decode URL (biar spasi normal)
-  name = decodeURIComponent(name);
+  // sanitize (lebih aman, support huruf Indo)
+  name = name.replace(/[^\p{L}\p{N}\s.,'-]/gu, "");
 
-  // sanitize (hindari script injection)
-  name = name.replace(/[^a-zA-Z0-9\s.,'-]/g, "");
+  // rapikan spasi
+  name = name.trim().replace(/\s+/g, " ");
 
-  return name;
+  return capitalizeName(name);
+}
+
+// ==========================
+// CAPITALIZE (BIAR RAPI)
+// ==========================
+function capitalizeName(name) {
+  return name.replace(/\b\w/g, char => char.toUpperCase());
 }
 
 // ==========================
