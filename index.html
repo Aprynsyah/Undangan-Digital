@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan – Firmansyah & Nabila</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav class="nav-dots" id="navDots">
+  <div class="nav-dot active" data-section="cover" onclick="scrollToSection('cover')"><span class="nd-tip">Cover</span></div>
+  <div class="nav-dot" data-section="couple" onclick="scrollToSection('couple')"><span class="nd-tip">Mempelai</span></div>
+  <div class="nav-dot" data-section="event" onclick="scrollToSection('event')"><span class="nd-tip">Acara</span></div>
+  <div class="nav-dot" data-section="story" onclick="scrollToSection('story')"><span class="nd-tip">Cerita</span></div>
+  <div class="nav-dot" data-section="countdown" onclick="scrollToSection('countdown')"><span class="nd-tip">Hitung Mundur</span></div>
+  <div class="nav-dot" data-section="location" onclick="scrollToSection('location')"><span class="nd-tip">Lokasi</span></div>
+  <div class="nav-dot" data-section="gallery" onclick="scrollToSection('gallery')"><span class="nd-tip">Galeri</span></div>
+  <div class="nav-dot" data-section="video" onclick="scrollToSection('video')"><span class="nd-tip">Video</span></div>
+  <div class="nav-dot" data-section="gift" onclick="scrollToSection('gift')"><span class="nd-tip">Hadiah</span></div>
+  <div class="nav-dot" data-section="rsvp" onclick="scrollToSection('rsvp')"><span class="nd-tip">RSVP</span></div>
+  <div class="nav-dot" data-section="guestbook" onclick="scrollToSection('guestbook')"><span class="nd-tip">Buku Tamu</span></div>
+  <div class="nav-dot" data-section="closing" onclick="scrollToSection('closing')"><span class="nd-tip">Penutup</span></div>
+</nav>
+
+<button id="music-btn" onclick="toggleMusic()" title="Putar Musik">
+  <span id="music-icon">♪</span>
+  <span class="music-pulse"></span>
+</button>
+<audio id="bg-music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<!-- ① COVER -->
+<section id="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-grid"></div>
+
+  <div class="frame3d-cover">
+
+    <div class="f3d-shadow"></div>
+
+    <div class="f3d-body">
+      <div class="f3d-left-edge"></div>
+      <div class="f3d-top-edge"></div>
+
+      <div class="f3d-face">
+
+        <!-- CORNER -->
+        <div class="fc-corner tl"></div>
+        <div class="fc-corner tr"></div>
+        <div class="fc-corner bl"></div>
+        <div class="fc-corner br"></div>
+
+        <div class="fc-inner-border"></div>
+
+        <!-- CONTENT -->
+        <div class="fc-content">
+
+          <div class="bismillah">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+          </div>
+
+          <!-- NAMA TAMU -->
+          <div class="guest-name">
+            Kepada Yth:
+            <span id="guestText">Apriyansyah</span>
+          </div>
+
+          <div class="cover-badge">
+            ✦ Undangan Pernikahan ✦
+          </div>
+
+          <div class="cover-names">
+            <em>Firmansyah</em>
+            <span class="ampersand">&</span>
+            <em>Nabila</em>
+          </div>
+
+          <div class="orn-row">
+            <span class="orn-line"></span>
+            <span class="orn-gem">◆</span>
+            <span class="orn-line"></span>
+          </div>
+
+          <div class="cover-date">
+            12 · 12 · 2026
+          </div>
+
+          <div class="cover-city">
+            Jakarta, Indonesia
+          </div>
+
+          <a class="btn-open" href="#couple">
+            Buka Undangan →
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② COUPLE -->
+<section id="couple" class="sec-a">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Mempelai &nbsp; ✦</div>
+    <h2 class="sec-title">Dua Insan Bersatu</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="couple-wrap">
+    <div class="person-3d reveal" data-delay="0">
+      <div class="p3d-side"></div>
+      <div class="p3d-top"></div>
+      <div class="p3d-face">
+        <div class="pc-corner tl"></div><div class="pc-corner tr"></div>
+        <div class="pc-corner bl"></div><div class="pc-corner br"></div>
+        <div class="avatar-wrap"><img src="assets/pria.jpeg" alt="Firmansyah" class="avatar-img"></div>
+        <div class="person-name">Firmansyah</div>
+        <div class="person-role">Putra Pertama dari</div>
+        <div class="person-parents">Bapak Ahmad &amp; Ibu Sari</div>
+      </div>
+    </div>
+    <div class="amp-col reveal" data-delay="150">
+      <div class="amp-vline"></div>
+      <div class="amp-char">&amp;</div>
+      <div class="amp-vline"></div>
+    </div>
+    <div class="person-3d reveal" data-delay="300">
+      <div class="p3d-side"></div>
+      <div class="p3d-top"></div>
+      <div class="p3d-face">
+        <div class="pc-corner tl"></div><div class="pc-corner tr"></div>
+        <div class="pc-corner bl"></div><div class="pc-corner br"></div>
+        <div class="avatar-wrap"><img src="assets/wanita.jpg" alt="Nabila" class="avatar-img"></div>
+        <div class="person-name">Nabila Putri</div>
+        <div class="person-role">Putri Pertama dari</div>
+        <div class="person-parents">Bapak Hasan &amp; Ibu Dewi</div>
+      </div>
+    </div>
+  </div>
+  <p class="body-text reveal" data-delay="400">Dengan penuh rasa syukur dan bahagia, kami mengundang Anda untuk menjadi saksi ikatan suci kami dalam momen yang paling berarti dalam hidup kami.</p>
+</section>
+
+<!-- ③ EVENT -->
+<section id="event" class="sec-b">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Jadwal Acara &nbsp; ✦</div>
+    <h2 class="sec-title">Hari Istimewa</h2>
+    <div class="gold-rule"></div>
+    <p class="body-text">Sabtu, 12 Desember 2026</p>
+  </div>
+  <div class="event-grid">
+    <div class="event-3d reveal" data-delay="0">
+      <div class="e3d-side"></div>
+      <div class="e3d-top"></div>
+      <div class="e3d-face">
+        <div class="e3d-strip"></div>
+        <div class="ec-corner tl"></div><div class="ec-corner tr"></div>
+        <div class="ec-corner bl"></div><div class="ec-corner br"></div>
+        <div class="e3d-icon">◈</div>
+        <div class="e3d-type">Akad Nikah</div>
+        <div class="e3d-clock">08<span>:</span>00</div>
+        <div class="e3d-wib">WIB</div>
+        <div class="e3d-hr"></div>
+        <div class="e3d-detail">Sabtu, 12 Desember 2026</div>
+        <div class="e3d-detail">Gedung Serbaguna</div>
+        <div class="e3d-detail muted">Lantai 2 — Ruang Mawar</div>
+      </div>
+    </div>
+    <div class="event-3d reveal" data-delay="200">
+      <div class="e3d-side"></div>
+      <div class="e3d-top"></div>
+      <div class="e3d-face">
+        <div class="e3d-strip"></div>
+        <div class="ec-corner tl"></div><div class="ec-corner tr"></div>
+        <div class="ec-corner bl"></div><div class="ec-corner br"></div>
+        <div class="e3d-icon">◉</div>
+        <div class="e3d-type">Resepsi</div>
+        <div class="e3d-clock">10<span>:</span>00</div>
+        <div class="e3d-wib">WIB – Selesai</div>
+        <div class="e3d-hr"></div>
+        <div class="e3d-detail">Sabtu, 12 Desember 2026</div>
+        <div class="e3d-detail">Gedung Serbaguna</div>
+        <div class="e3d-detail muted">Lantai 1 — Ballroom Utama</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ STORY -->
+<section id="story" class="sec-a">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Perjalanan Kami &nbsp; ✦</div>
+    <h2 class="sec-title">Love Story</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="timeline">
+    <div class="tl-spine"></div>
+    <div class="tl-row reveal left" data-delay="0">
+      <div class="tl-card-3d">
+        <div class="tlc-side"></div>
+        <div class="tlc-face">
+          <div class="tlc-year">2019</div>
+          <div class="tlc-dot-wrap"><div class="tlc-dot"></div></div>
+          <p class="tlc-text">Pertama kali bertemu dan mulai saling mengenal dalam sebuah pertemuan yang tak terduga dan penuh makna.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-row reveal right" data-delay="150">
+      <div class="tl-card-3d">
+        <div class="tlc-side"></div>
+        <div class="tlc-face">
+          <div class="tlc-year">2022</div>
+          <div class="tlc-dot-wrap"><div class="tlc-dot"></div></div>
+          <p class="tlc-text">Menjalin hubungan lebih serius, penuh komitmen, dan saling mendukung satu sama lain.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-row reveal left" data-delay="300">
+      <div class="tl-card-3d">
+        <div class="tlc-side"></div>
+        <div class="tlc-face">
+          <div class="tlc-year">2025</div>
+          <div class="tlc-dot-wrap"><div class="tlc-dot"></div></div>
+          <p class="tlc-text">Lamaran diucapkan dengan penuh cinta, menandai awal babak baru kehidupan bersama.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-row reveal right gold-card" data-delay="450">
+      <div class="tl-card-3d gold">
+        <div class="tlc-side gold"></div>
+        <div class="tlc-face gold">
+          <div class="tlc-year gold">2026 ✦</div>
+          <div class="tlc-dot-wrap gold"><div class="tlc-dot"></div></div>
+          <p class="tlc-text">Memutuskan untuk menikah dan membangun kehidupan rumah tangga yang sakinah, mawaddah, warahmah.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ COUNTDOWN -->
+<section id="countdown" class="sec-b">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Menghitung Hari &nbsp; ✦</div>
+    <h2 class="sec-title">Tinggal Sebentar Lagi</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="countdown-wrap reveal">
+    <div class="cd-unit">
+      <div class="cd-box-3d">
+        <div class="cd-box-side l"></div>
+        <div class="cd-box-side r"></div>
+        <div class="cd-box-side t"></div>
+        <div class="cd-box-side b"></div>
+        <div class="cd-box-face" id="cd-d">—</div>
+      </div>
+      <div class="cd-label">Hari</div>
+    </div>
+    <div class="cd-colon">:</div>
+    <div class="cd-unit">
+      <div class="cd-box-3d">
+        <div class="cd-box-side l"></div>
+        <div class="cd-box-side r"></div>
+        <div class="cd-box-side t"></div>
+        <div class="cd-box-side b"></div>
+        <div class="cd-box-face" id="cd-h">—</div>
+      </div>
+      <div class="cd-label">Jam</div>
+    </div>
+    <div class="cd-colon">:</div>
+    <div class="cd-unit">
+      <div class="cd-box-3d">
+        <div class="cd-box-side l"></div>
+        <div class="cd-box-side r"></div>
+        <div class="cd-box-side t"></div>
+        <div class="cd-box-side b"></div>
+        <div class="cd-box-face" id="cd-m">—</div>
+      </div>
+      <div class="cd-label">Menit</div>
+    </div>
+    <div class="cd-colon">:</div>
+    <div class="cd-unit">
+      <div class="cd-box-3d">
+        <div class="cd-box-side l"></div>
+        <div class="cd-box-side r"></div>
+        <div class="cd-box-side t"></div>
+        <div class="cd-box-side b"></div>
+        <div class="cd-box-face" id="cd-s">—</div>
+      </div>
+      <div class="cd-label">Detik</div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ LOCATION -->
+<section id="location" class="sec-a">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Lokasi &nbsp; ✦</div>
+    <h2 class="sec-title">Temukan Kami</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="map-3d reveal">
+    <div class="map3d-side"></div>
+    <div class="map3d-top"></div>
+    <div class="map3d-face">
+      <div class="mc-corner tl"></div><div class="mc-corner tr"></div>
+      <div class="mc-corner bl"></div><div class="mc-corner br"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395509905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonas%2C%20Jakarta%2C%20Indonesia!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="loc-info reveal">
+    <div class="loc-name">Gedung Serbaguna Premier</div>
+    <div class="loc-addr">Jl. Contoh No. 123, Jakarta Pusat, DKI Jakarta 10110</div>
+    <a class="btn-outline" href="https://maps.google.com" target="_blank">Buka di Google Maps ↗</a>
+  </div>
+</section>
+
+<!-- ⑦ GALLERY -->
+<section id="gallery" class="sec-b">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Galeri &nbsp; ✦</div>
+    <h2 class="sec-title">Kenangan Pra-Nikah</h2>
+    <div class="gold-rule"></div>
+    <p class="body-text">Setiap momen bersama adalah keajaiban tersendiri.</p>
+  </div>
+  <div class="gallery-mosaic reveal">
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+    <img src="assets/prawedding-1.jpg" class="g3d-img" alt="Foto 1"><div class="g3d-overlay">Foto 1</div>
+  </div>
+</section>
+
+<!-- ⑧ VIDEO -->
+<section id="video" class="sec-a">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Video &nbsp; ✦</div>
+    <h2 class="sec-title">Prewedding</h2>
+    <div class="gold-rule"></div>
+  </div>
+
+  <div class="video-3d reveal">
+
+    <div class="v3d-side"></div>
+    <div class="v3d-top"></div>
+
+    <div class="v3d-face">
+
+      <div class="vc-corner tl"></div>
+      <div class="vc-corner tr"></div>
+      <div class="vc-corner bl"></div>
+      <div class="vc-corner br"></div>
+
+      <!-- WRAPPER -->
+      <div class="video-wrapper">
+
+        <!-- VIDEO -->
+        <iframe 
+          src="https://www.youtube.com/embed/CVq-My6s8kM?autoplay=0&mute=0&controls=1&modestbranding=1"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ GIFT -->
+<section id="gift" class="sec-b">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Hadiah &nbsp; ✦</div>
+    <h2 class="sec-title">Wedding Gift</h2>
+    <div class="gold-rule"></div>
+    <p class="body-text">Doa restu Anda adalah hadiah terbaik. Namun jika ingin memberikan tanda kasih:</p>
+  </div>
+  <div class="gift-3d reveal">
+    <div class="gft-side"></div>
+    <div class="gft-top"></div>
+    <div class="gft-face">
+      <div class="gc-corner tl"></div><div class="gc-corner tr"></div>
+      <div class="gc-corner bl"></div><div class="gc-corner br"></div>
+      <div class="gft-bank">🏦 BCA</div>
+      <div class="gft-num">1234 &nbsp; 5678 &nbsp; 90</div>
+      <div class="gft-name">a.n Firmansyah</div>
+      <div class="gft-hr"></div>
+      <button class="btn-copy-gold" onclick="copyRek()"><span id="copy-label">Salin Nomor Rekening</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ RSVP -->
+<section id="rsvp" class="sec-a">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Konfirmasi Kehadiran &nbsp; ✦</div>
+    <h2 class="sec-title">Apakah Anda Hadir?</h2>
+    <div class="gold-rule"></div>
+    <p class="body-text">Mohon konfirmasi kehadiran Anda selambat-lambatnya 30 November 2026.</p>
+  </div>
+  <div class="form-3d reveal">
+    <div class="fm-side"></div>
+    <div class="fm-top"></div>
+    <div class="fm-face">
+      <div class="fmc-corner tl"></div><div class="fmc-corner tr"></div>
+      <div class="fmc-corner bl"></div><div class="fmc-corner br"></div>
+      <form class="the-form" onsubmit="submitRSVP(event)">
+        <input type="text" id="rsvp-name" placeholder="Nama Lengkap" required>
+        <input type="text" id="rsvp-phone" placeholder="Nomor WhatsApp">
+        <select id="rsvp-attend">
+          <option value="" disabled selected>— Konfirmasi Kehadiran —</option>
+          <option value="hadir">✓ &nbsp; Insyaallah Hadir</option>
+          <option value="tidak">✗ &nbsp; Tidak Dapat Hadir</option>
+          <option value="mungkin">? &nbsp; Mungkin Hadir</option>
+        </select>
+        <input type="number" id="rsvp-guests" placeholder="Jumlah Tamu (termasuk Anda)" min="1" max="10">
+        <textarea id="rsvp-wish" placeholder="Ucapan &amp; Doa untuk Mempelai"></textarea>
+        <button type="submit" class="btn-form-submit">Kirim Konfirmasi &nbsp; ✦</button>
+        <div class="form-msg" id="rsvp-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ⑪ GUESTBOOK -->
+<section id="guestbook" class="sec-b">
+  <div class="sec-head reveal">
+    <div class="sec-label">✦ &nbsp; Buku Tamu &nbsp; ✦</div>
+    <h2 class="sec-title">Doa &amp; Harapan</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="form-3d reveal" style="margin-bottom:32px">
+    <div class="fm-side"></div>
+    <div class="fm-top"></div>
+    <div class="fm-face">
+      <div class="fmc-corner tl"></div><div class="fmc-corner tr"></div>
+      <div class="fmc-corner bl"></div><div class="fmc-corner br"></div>
+      <form class="the-form" onsubmit="addComment(event)">
+        <input type="text" id="guest-name" placeholder="Nama Anda" required>
+        <textarea id="guest-msg" placeholder="Sampaikan ucapan &amp; doa tulus Anda..." required></textarea>
+        <button type="submit" class="btn-form-submit">Kirim Ucapan &nbsp; ✦</button>
+      </form>
+    </div>
+  </div>
+  <div id="comment-list"></div>
+</section>
+
+<!-- ⑫ CLOSING -->
+<section id="closing">
+  <div class="closing-bg"></div>
+  <div class="closing-grid"></div>
+  <div class="closing-frame3d reveal">
+    <div class="clf-side"></div>
+    <div class="clf-top"></div>
+    <div class="clf-face">
+      <div class="clf-corner tl"></div><div class="clf-corner tr"></div>
+      <div class="clf-corner bl"></div><div class="clf-corner br"></div>
+      <div class="clf-top-orn">✦ &nbsp; ◆ &nbsp; ✦</div>
+      <div class="sec-label" style="margin-bottom:20px">Penutup</div>
+      <blockquote class="closing-quote">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."</blockquote>
+      <div class="closing-source">— QS. Ar-Rum: 21 —</div>
+      <div class="closing-divider"><span></span><span class="cd-gem">◆</span><span></span></div>
+      <div class="closing-names">Firmansyah &amp; Nabila</div>
+      <div class="closing-date">12 · 12 · 2026 &nbsp;—&nbsp; Jakarta</div>
+      <div class="clf-bot-orn">✦ &nbsp; ◆ &nbsp; ✦</div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
